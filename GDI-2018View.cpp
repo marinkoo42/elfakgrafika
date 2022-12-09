@@ -68,13 +68,6 @@ CGDI2018View::~CGDI2018View()
 	// delete[] mat;
 }
 
-BOOL CGDI2018View::PreCreateWindow(CREATESTRUCT& cs)
-{
-	// TODO: Modify the Window class or styles here by modifying
-	//  the CREATESTRUCT cs
-
-	return CView::PreCreateWindow(cs);
-}
 
 // CGDI2018View drawing
 
@@ -545,54 +538,11 @@ void CIND17739View::Paint(DImage* img, int color)
 
 
 
-// CGDI2018View printing
-
-BOOL CGDI2018View::OnPreparePrinting(CPrintInfo* pInfo)
-{
-	// default preparation
-	return DoPreparePrinting(pInfo);
-}
-
-void CGDI2018View::OnBeginPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
-{
-	// TODO: add extra initialization before printing
-}
-
-void CGDI2018View::OnEndPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
-{
-	// TODO: add cleanup after printing
-}
-
-
-// CGDI2018View diagnostics
-
-#ifdef _DEBUG
-void CGDI2018View::AssertValid() const
-{
-	CView::AssertValid();
-}
-
-void CGDI2018View::Dump(CDumpContext& dc) const
-{
-	CView::Dump(dc);
-}
-
-CGDI2018Doc* CGDI2018View::GetDocument() const // non-debug version is inline
-{
-	ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(CGDI2018Doc)));
-	return (CGDI2018Doc*)m_pDocument;
-}
-#endif //_DEBUG
-
-
-// CGDI2018View message handlers
-
-
 BOOL CGDI2018View::OnEraseBkgnd(CDC* pDC)
 {
 	// TODO: Add your message handler code here and/or call default
 
-	return FALSE;
+	return TRUE;
 }
 
 
